@@ -1,0 +1,44 @@
+//------------------>>>>>>left side bar<<<<<<------------------
+
+.left-sidebar-menu-item {
+  @include flexSetting(flex, left, center);
+  transition: ease-in-out 0.1s;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  margin: 0px;
+  border: 0px;
+  font-size: 14px;
+  outline: 0px;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: var(--background-default);
+  color: var(--text-color);
+
+  &-active {
+    @extend .left-sidebar-menu-item;
+    background-color: var(--background-lightNeutrals-highEmphasis);
+    &::before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 4px;
+      left: 0px;
+      top: 12px;
+      background: rgb(0, 82, 204);
+      border-radius: 0px 1.998px 1.998px 0px;
+    }
+  }
+
+  &:hover {
+    background-color: var(--background-lightNeutrals-highEmphasis);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,IAAI,CAAC;EACH,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK;EACZ,YAAY,EAAE,GAAG;CAClB;;AAED,AAAA,IAAI,CAAC;ECAH,SAAS,EDCY,IAAI;ECAzB,WAAW,EDAgB,GAAG;ECC9B,WAAW,EDDqB,IAAI;CACrC",
+    "sources": [
+        "test.scss",
+        "layout/_mixin.scss"
+    ],
+    "names": [],
+    "file": "test.css"
+}

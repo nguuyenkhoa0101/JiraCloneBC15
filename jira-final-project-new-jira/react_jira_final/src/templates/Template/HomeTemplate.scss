@@ -1,0 +1,129 @@
+@import "../../CSS/layout/mixin";
+
+.jira {
+  position: relative;
+  padding-top: 56px;
+  display: flex;
+  height: 100vh;
+
+  &-sidebar {
+    min-width: 245px;
+    height: 100%;
+    overflow-y: auto;
+
+    &-top {
+      @include flexSetting(flex, space-between, center);
+      height: 83px;
+      padding: 24px 8px 8px;
+
+      .brand {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        padding: 8px 10px;
+      }
+
+      .brand-logo {
+        @include flexSetting(flex, center, center);
+        margin-right: 16px;
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+
+      .brand-text {
+        .h2-title {
+          margin: 0px;
+        }
+        .text-default {
+          @include textSetting(12px, 400, 15px);
+          margin: 3px 0px 0px 0px;
+        }
+      }
+    }
+
+    &-control {
+      position: relative;
+      margin: 0px 8px 20px;
+      padding-top: 8px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: var(--border-lightNeutrals-light);
+        top: 0;
+      }
+
+      .icon {
+        @include flexSetting(flex, center, center);
+        margin-right: 16px;
+        width: 24px;
+        height: 24px;
+
+        i {
+          font-size: 23px;
+        }
+      }
+    }
+
+    &-features {
+      @extend .jira-sidebar-control;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding: 0px 40px 32px;
+    box-shadow: 2px 0px 5px gray;
+  }
+}
+
+//------------------>>>>>>left side bar<<<<<<------------------
+
+.left-sidebar-menu-item {
+  @include flexSetting(flex, left, center);
+  transition: ease-in-out 0.1s;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  margin: 0px;
+  border: 0px;
+  font-size: 14px;
+  outline: 0px;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: var(--background-default);
+  color: var(--text-color);
+
+  &-active {
+    @extend .left-sidebar-menu-item;
+    background-color: var(--background-lightNeutrals-highEmphasis);
+    &::before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 4px;
+      left: 0px;
+      top: 12px;
+      background: rgb(0, 82, 204);
+      border-radius: 0px 1.998px 1.998px 0px;
+    }
+  }
+
+  &:hover {
+    background-color: var(--background-lightNeutrals-highEmphasis);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

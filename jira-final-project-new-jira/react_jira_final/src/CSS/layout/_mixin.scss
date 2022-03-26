@@ -1,0 +1,18 @@
+@mixin flexSetting($display, $justyfy-content, $align-items) {
+  display: $display;
+  justify-content: $justyfy-content;
+  align-items: $align-items;
+}
+
+@mixin textSetting($fontSize, $fontWeight, $lineHeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+@mixin borderSetting($borderWidth, $borderStyle, $borderColor, $borderRadius) {
+  border-width: $borderWidth;
+  border-style: $borderStyle;
+  border-color: $borderColor;
+  border-radius: $borderRadius;
+}

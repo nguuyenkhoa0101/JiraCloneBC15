@@ -1,0 +1,10 @@
+@import "./layout/_mixin.scss";
+.t-1 {
+  position: relative;
+  width: 200px;
+  margin-right: 4px;
+}
+
+.t-2 {
+  @include textSetting(14px, 500, 32px);
+}

@@ -1,0 +1,24 @@
+@import "./layout/mixin";
+@import "./layout/header";
+@import "./base/reset";
+@import "./components/buttons";
+@import "./layout/leftSideBar";
+
+:root {
+  --primary-color: #0052cc;
+  --primary-color-hover: #0065ff;
+  --text-darkNeutrals-highEmphasis: #344563;
+  --text-darkNeutrals-mediumEmphasis: #42526e;
+  --text-color: #172b4d;
+  --text-brand: #0747a6;
+  --text-success: #006644;
+  --text-active: #0052cc;
+  --background-default: white;
+  --background-danger-lowEmphasis: #de350b;
+  --background-danger-mediumEmphasis: #de5630;
+  --background-lightNeutrals-highEmphasis: #ebecf0;
+  --background-lightNeutrals-mediumEmphasis: #f4f5f7;
+  --background-lightNeutrals-lowEmphasis: #fafbfc;
+  --background-lightNeutrals-selected: #505f79;
+  --border-lightNeutrals-light: #dfe1e6;
+}

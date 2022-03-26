@@ -1,0 +1,59 @@
+//------------------>>>>>>Buttonsr<<<<<<------------------
+
+.custom-btn-primary {
+  @include textSetting(14px !important, 500 !important, 32px !important);
+  transition: ease-in-out 0.2s !important;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  padding: 0px 10px !important;
+  border-radius: 3px !important;
+  border: none !important;
+  cursor: pointer !important;
+  &:hover {
+    background-color: var(--primary-color-hover) !important;
+  }
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.custom-btn-primary-hover {
+  &:hover {
+    background-color: #deebff !important;
+    color: var(--primary-color) !important;
+  }
+}
+
+.custom-btn-secondary {
+  @extend .custom-btn-primary;
+  background-color: var(--background-lightNeutrals-mediumEmphasis) !important;
+  color: var(--text-darkNeutrals-mediumEmphasis) !important;
+
+  &:hover {
+    background-color: var(--background-lightNeutrals-highEmphasis) !important;
+  }
+
+  &-selected {
+    @extend .custom-btn-primary;
+    background-color: var(--background-lightNeutrals-selected) !important;
+    color: var(--background-lightNeutrals-mediumEmphasis) !important;
+  }
+
+  &-hover {
+    @extend .custom-btn-secondary;
+    background-color: var(--background-default) !important;
+  }
+}
+
+.custom-btn-danger {
+  @extend .custom-btn-primary;
+  background-color: var(--background-danger-lowEmphasis) !important;
+  color: white !important;
+
+  &:hover {
+    @extend .custom-btn-primary;
+    background-color: var(--background-danger-mediumEmphasis) !important;
+    color: white;
+  }
+}
